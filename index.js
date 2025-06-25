@@ -1,19 +1,11 @@
 var cities = []
 var list = document.getElementById("list")
 
-// function addToList(){
-//     var city = document.getElementById("input-box")
-//     cities.push(city.value)
-//     list.innerHTML= ''
-//     city.value= ''
-//     showList()
-//     console.log(cities)
-// }
-
 function addToList(){
     var city = document.getElementById("input-box")
-    if (city.value.trim() === '') {
-        return; // Do nothing if the input is empty or just whitespace
+    if (city.value === ''){
+        alert("Please Enter City Name")
+        return
     }
     cities.push(city.value)
     list.innerHTML= ''
@@ -21,7 +13,6 @@ function addToList(){
     showList()
     console.log(cities)
 }
-
 
 function showList(){
     list.innerHTML= '';
@@ -42,3 +33,5 @@ function editListItem(index){
     cities[index] = city
     showList()
 }
+
+
